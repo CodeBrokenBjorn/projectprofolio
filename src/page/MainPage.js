@@ -1,0 +1,134 @@
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import "../css/style.css";
+import MyPicture from "../images/SarunasPicture.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+function MainPage() {
+  useEffect(() => {
+    const photoDetected = document.querySelector(".Photo");
+    const textDetected = document.querySelector(".content-display");
+    const photoImage = photoDetected.querySelector("img");
+    textDetected.style.opacity = "0";
+    photoImage.style.filter = "grayscale(100%)";
+
+    const handleMouseOver = () => {
+      textDetected.style.opacity = "1";
+      photoImage.style.filter = "grayscale(0%)";
+      console.log("increase size");
+    };
+
+    const handleMouseLeave = () => {
+      textDetected.style.opacity = "0";
+      photoImage.style.filter = "grayscale(100%)";
+    };
+
+    photoDetected.addEventListener("mouseover", handleMouseOver);
+    photoDetected.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      photoDetected.removeEventListener("mouseover", handleMouseOver);
+      photoDetected.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+  return (
+    <div className="container-main">
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#section1">Section 1</a>
+            </li>
+            <li>
+              <a href="#section2">Section 2</a>
+            </li>
+            <li>
+              <a href="#section3">Section 3</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="x mandatory-scroll-snapping always-stop">
+        <div id="about">
+          <div className="content-wrapper">
+            <div className="Content-Title">
+              <h1>Sarunas Ruzgis</h1>
+              <h2>About Me</h2>
+              <p>
+                Hey, my name is Sarunas Ruzgis. I am a Junior Software
+                developer. I am Junior Developer woh inspiring to become an
+                software Engineer. Currently I recently graduated that kinda
+                work.
+              </p>
+            </div>
+
+            <div className="Content-wrap">
+              <div className="Content-About">
+                <h1></h1>
+              </div>
+            </div>
+          </div>
+          <div className="content-wrapper-photo">
+            <div className="offset-border offset">
+              <div className="Photo">
+                <img
+                  className="offset-border offset"
+                  src={MyPicture}
+                  alt="My picture"
+                />
+                <div className="img-content">
+                  <div className="content-display">
+                    <h2>My Links</h2>
+                    <dl>
+                      <dt>Linkin:</dt>
+                      <dd>
+                        <a href="https://www.linkedin.com/in/sarunas-ruzgis-55a37a244/">
+                          https://www.linkedin.com/in/sarunas-ruzgis-55a37a244/
+                        </a>
+                      </dd>
+                      <dt>Github:</dt>
+                      <dd>SarunasRuz@Outlook.com</dd>
+                      <dt>Email:</dt>
+                      <dd>SarunasRuz@Outlook.com</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="section1" class="flex">
+          <div className="card-wrapper">
+            <div class="card-container">
+              <div className="card-row-Left">
+                <div className="img-row">
+                  <p>Content Goes left</p>
+                </div>
+                <div className="card-row-Right">
+                  <div className="img-row"></div>
+                  <p>Content Goes Right</p>
+                </div>
+                <div className="card-row-Left">
+                  <div className="img-row"></div>
+                  <p>Content Goes left</p>
+                </div>
+                <div className="card-row-Right">
+                  <div className="img-row"></div>
+                  <p>Content Goes Right</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="section2">{/* Section 2 content */}</div>
+        <div id="section3">{/* Section 3 content */}</div>
+      </div>
+    </div>
+  );
+}
+
+export default MainPage;

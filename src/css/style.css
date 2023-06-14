@@ -1,0 +1,212 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navigation bar */
+nav {
+    background-color: #3a2323;
+    padding: 15px;
+
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    animation-name: slidesImg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: wheat;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    color: #ccc;
+  }
+  
+  nav ul li a.active {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .active {
+    color: white;
+    background-color: darkgray;
+  }
+  
+  /* Scrolling CSS */
+  .x {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .x > div {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .x > div:nth-child(odd) {
+    background-color: hsl(0, 0%, 20%);
+  }
+  
+  .x > div:nth-child(even) {
+    background-color: #664;
+  }
+  
+  /* About page CSS */
+ 
+  
+  .content-wrapper {
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  @keyframes slidesText{
+    from{
+      transform: translateX(-24%);
+    }
+    to {
+      transform: translateX(15%);
+    }
+    
+  }
+  @keyframes slidesImg{
+    from{
+      transform: translateY(20%);
+    }
+    to {
+      transform: translateY(-5%);
+    }
+    
+  }
+  .Content-Title {
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 5px; 
+    margin-bottom: 0;
+    animation-name: slidesText;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+  }
+  .Content-Title, p{
+    padding:25px;
+    display: left;
+}
+.content-wrapper-photo {
+    margin-right: 15%;
+
+}
+  .offset-border {
+    border: #dfbaba 1px 2px;
+    padding: 5px;
+    margin-right: 2%;
+    position: relative;
+
+
+    
+  }
+  .Photo {
+    width: 600px;
+    height: 800px;
+    background-color: hsl(0, 0%, 21%);
+    margin-right: auto;
+    border-radius: 35px;
+    position: relative;  
+    box-shadow: 0 2px 6px #000000;
+    transition: 0.4s;
+    animation-name: slidesImg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.Photo:hover {
+  height: 980px;
+  
+}
+
+
+.Photo img {
+    transition: 1.2s;
+    border-radius: 70%;
+    margin-top: -20%;
+    margin-left: 18%;
+    margin-right: 25% ;
+}
+.Photo .img-content{
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.Photo .img-content .content-display {
+  transition-duration: 120ms;
+  transition-delay: 0.6ms;
+  padding:  40px;
+  text-align: center;
+  width: 100%;
+}
+@keyframes slider{
+  from{
+    transform: translateX(-500px);
+  }
+  
+}
+.card-wrapper {
+ height: 100%;
+ width: 100%;
+ padding: 10%;
+ margin: 10%;
+ margin-top: 25%;
+ margin-left: 25%;
+ margin-right: 25%;
+}
+.card-container {
+  margin: auto;
+  padding: 10px;
+  height: auto;
+  width: auto;
+ }
+
+.card-row-Left {
+  float:left;
+  margin-left: 25%;
+
+
+}
+.card-row-Left h1 p {
+
+}
+.card-row-Right h1 p{
+  
+}
+.card-row-Right {
+  
+}
+.img-row {
+
+}

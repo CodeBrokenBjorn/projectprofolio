@@ -821,35 +821,40 @@ nav ul li a.active {
   }
 }
 
+.Card-main {
+}
+
 .card-wrapper {
-  height: 100%;
-  width: 100%;
-  padding: 10%;
-  margin: 10%;
-  margin-top: 25%;
-  margin-left: 25%;
-  margin-right: 25%;
+  display: flex;
 }
 
 .card-container {
   margin: auto;
   padding: 10px;
-  height: auto;
+  height: 100vh;
   width: auto;
+  flex-direction: column;
+  align-self: self-start;
 }
 
 .card-row-Left {
-  float:left;
-  margin-left: 25%;
+  justify-content: left;
+  margin:auto;
+  padding: 10px;
+  align-items: flex-start;
 }
 
 .card-row-Left h1 p {
+  margin-left:25%;
 }
 
 .card-row-Right h1 p{
 }
 
 .card-row-Right {
+  margin-right: 25%;
+  padding: -10px;
+  display:flex;
 }
 
 .img-row {

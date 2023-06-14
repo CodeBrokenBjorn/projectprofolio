@@ -100,28 +100,28 @@ function MainPage() {
           </div>
         </div>
 
-        <div id="section1" class="flex">
+        <div id="section1" class="Card-main row-auto row">
           <div className="card-wrapper">
             <div class="card-container">
-              <div className="card-row-Left">
-                <div className="img-row">
+              <div class="card-row-Left col-lg-4">
+                <div class="img-row"> </div>
+                  
                   <p>Content Goes left</p>
                 </div>
-                <div className="card-row-Right">
-                  <div className="img-row"></div>
+                <div class="card-row-Right col-lg-4">
+                  <div class="img-row"></div>
                   <p>Content Goes Right</p>
                 </div>
-                <div className="card-row-Left">
+                <div class="card-row-Left col-lg-4">
                   <div className="img-row"></div>
                   <p>Content Goes left</p>
                 </div>
-                <div className="card-row-Right">
+                <div className="card-row-Right col-lg-4">
                   <div className="img-row"></div>
                   <p>Content Goes Right</p>
                 </div>
               </div>
             </div>
-          </div>
         </div>
 
         <div id="section2">{/* Section 2 content */}</div>

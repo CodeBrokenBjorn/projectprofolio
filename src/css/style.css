@@ -214,3 +214,31 @@ nav {
 .img-row {
 
 }
+
+.map-wrapper {
+  display: flex;
+  margin: auto;
+  height: 100vh;
+  padding: 2px;
+
+}
+.map-container {
+  
+  box-sizing: border-box;
+  color: white;
+}
+.map-box{
+  border: 12px 12px 15px #ffffff;
+  flex-direction: column;
+  padding: 2PX;
+  border-radius: 2px;
+}
+.map-text {
+  bottom: 8px;
+  left: 16px;
+
+}
+.map-image {
+  padding: 20px;
+  margin: 2%;
+}

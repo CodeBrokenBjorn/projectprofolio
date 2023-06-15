@@ -2,8 +2,31 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../css/style.css";
 import MyPicture from "../images/SarunasPicture.png";
+import Project from "../images/Project.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 function MainPage() {
+
+  const content = [
+  {
+    image:Project,
+    text:"To do list: In React",
+    language:["JavaScript, Html, React, Jess, Css"],
+    date:"21/04/2023"
+  },
+  {
+    image:"Project2",
+    text:"Holiday Planner: FullStack",
+    language:["JavaScript, Node.js, React, HTML"],
+    date:"24/05/2000"
+  },
+  {
+    image:"stuff",
+    text:"Login Page: Cloud Development",
+    language:["JavaScript, Node.js, React, JWT"],
+    date:"24/05/2000"
+  },
+]
+
   useEffect(() => {
     const photoDetected = document.querySelector(".Photo");
     const textDetected = document.querySelector(".content-display");
@@ -124,7 +147,27 @@ function MainPage() {
             </div>
         </div>
 
-        <div id="section2">{/* Section 2 content */}</div>
+        <div id="section2">
+          <div className="map-wrapper">
+            <div className="map-container">
+                {content.map((item, index) => (
+                  <li key={index}>)
+              <div className="map-box">
+                <div className="map-image">
+                  <img alt={`cover of ${item.image}`} src={item.image} />
+                  <div className="map-text">
+                    <p>{item.text}</p>
+                    <h5>{item.language}</h5>
+                    <h6>{item.date}</h6>
+                  </div>
+              </div>
+                </div>
+                </li>
+              ))}}
+            </div>
+          </div>
+          
+          </div>
         <div id="section3">{/* Section 3 content */}</div>
       </div>
     </div>

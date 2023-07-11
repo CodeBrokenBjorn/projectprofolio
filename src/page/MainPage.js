@@ -7,6 +7,8 @@ import Project from "../images/Project.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProjectPic from "../images/ProjectPicture.png";
 import HobbiesPic from "../images/HobiesPicture.png";
+import Carousels from "../ContentPage/Carousels";
+
 function MainPage() {
   const AccordionItem = ({ title, content, isActive, onItemClick }) => {
     return (
@@ -164,7 +166,66 @@ function MainPage() {
         </div>
 
         <div id="section1">
-          {/* <div class="Card-main">
+          <Carousels />
+        </div>
+        {/* <div class="card-wrapper">
+    <div class="card-container flex grid-cols-1 gap-4">
+      <div class="card-row-Left col-span-1 bg-gray-200 p-4">
+        <div class="img-row h-20 bg-gray-400"></div>
+        <p>Content Goes left</p>
+      </div>
+      <div class="card-row-Right col-span-1 bg-gray-200 p-4">
+        <div class="img-row h-20 bg-gray-400"></div>
+        <p>Content Goes Right</p>
+      </div>
+      <div class="card-row-Left col-span-1 bg-gray-200 p-4">
+        <div class="img-row h-20 bg-gray-400"></div>
+        <p>Content Goes left</p>
+      </div>
+      <div class="card-row-Right col-span-1 bg-gray-200 p-4">
+        <div class="img-row h-20 bg-gray-400"></div>
+        <p>Content Goes Right</p>
+      </div>
+    </div>
+  </div>
+</div> */}
+
+        <div id="section2">
+        {/* <div className="map-wrapper">
+            <div className="map-container">
+          
+                {content.map((item, index) => (
+                  <div className="map-box-wrapper">
+                  <ul key={index}>
+                    
+              <div className="map-box">
+                  <img alt={`cover of ${item.image}`} src={item.image} />
+                <div className="map-content">
+                    <p>{item.text}</p>
+                    <h5>{item.language}</h5>
+                    <h6>{item.date}</h6>
+                    </div>
+                </div>
+           
+                </ul>
+                </div>
+              ))}
+            </div>
+          </div> */}
+
+
+        </div>
+        <div id="section3">
+   
+    
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default MainPage;
+  <div class="Card-main">
             <div class="card-wrapper">
               <div class="card-box">
                 <div class="card-content">
@@ -235,66 +296,8 @@ function MainPage() {
                     purus, nec consequat lorem. Etiam ipsum lectus, tincidunt
                     eget accumsan finibus, bibendum eget diam.
                   </p>
-                </div> */}
+                </div>
               </div>
               {/* Content 4  */}
             </div>
           </div>
-        </div>
-        {/* <div class="card-wrapper">
-    <div class="card-container flex grid-cols-1 gap-4">
-      <div class="card-row-Left col-span-1 bg-gray-200 p-4">
-        <div class="img-row h-20 bg-gray-400"></div>
-        <p>Content Goes left</p>
-      </div>
-      <div class="card-row-Right col-span-1 bg-gray-200 p-4">
-        <div class="img-row h-20 bg-gray-400"></div>
-        <p>Content Goes Right</p>
-      </div>
-      <div class="card-row-Left col-span-1 bg-gray-200 p-4">
-        <div class="img-row h-20 bg-gray-400"></div>
-        <p>Content Goes left</p>
-      </div>
-      <div class="card-row-Right col-span-1 bg-gray-200 p-4">
-        <div class="img-row h-20 bg-gray-400"></div>
-        <p>Content Goes Right</p>
-      </div>
-    </div>
-  </div>
-</div> */}
-
-        <div id="section2">
-        {/* <div className="map-wrapper">
-            <div className="map-container">
-          
-                {content.map((item, index) => (
-                  <div className="map-box-wrapper">
-                  <ul key={index}>
-                    
-              <div className="map-box">
-                  <img alt={`cover of ${item.image}`} src={item.image} />
-                <div className="map-content">
-                    <p>{item.text}</p>
-                    <h5>{item.language}</h5>
-                    <h6>{item.date}</h6>
-                    </div>
-                </div>
-           
-                </ul>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
-
-        </div>
-        <div id="section3">
-   
-    
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default MainPage;
